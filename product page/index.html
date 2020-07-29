@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="global.css">
+	</head>
+	<body>
+		<section class="sec-product">
+			<article class="art">
+				<div class="art-container">
+					<div class="img-slide">
+						<img class="slides" src="forest.jpg">
+						<img class="slides" src="forest.jpg">
+						<img class="slides" src="forest.jpg">
+						<img class="slides" src="forest.jpg">
+						<div class="btn-control">
+							<button class="" onclick="plusDivs(-1)">&#10094;</button>
+							<button class="" onclick="plusDivs(1)">&#10095;</button>
+						</div>
+					</div>
+					<div class="container-detail">
+						<span></span>
+						<h1>Explore  our<br>amazing products</h1>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+							tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse
+							cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+						<button class="more">&#8595;</button>
+					</div>
+				</div>
+				<div class="art-details extend">
+					<div></div>
+				</div>
+			</article>
+
+
+			<article class="art">
+				<div class="art-container">
+					<div class="img-slide">
+						<img class="slides" src="forest.jpg">
+						<div class="btn-control">
+							<button class="" onclick="plusDivs(-1)">&#10094;</button>
+							<button class="" onclick="plusDivs(1)">&#10095;</button>
+						</div>
+					</div>
+					<div class="container-detail">
+						<span></span>
+						<h1>Explore  our<br>amazing products</h1>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+							tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse
+							cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+						<button class="more">&#8595;</button>
+					</div>
+				</div>
+				<div class="art-details extend">
+					<div></div>
+				</div>
+			</article>
+
+
+			<article class="art">
+				<div class="art-container">
+					<div class="img-slide">
+						<img class="slides" src="forest.jpg">
+						<div class="btn-control">
+							<button class="" onclick="plusDivs(-1)">&#10094;</button>
+							<button class="" onclick="plusDivs(1)">&#10095;</button>
+						</div>
+					</div>
+					<div class="container-detail">
+						<span></span>
+						<h1>Explore  our<br>amazing products</h1>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+							tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse
+							cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+						<button class="more" onclick="" >&#8595;</button>
+					</div>
+				</div>
+				<div class="art-details extend">
+					<div></div>
+				</div>
+			</article>
+		</section>
+		<script>
+		var slideIndex = 1;
+		showDivs(slideIndex);
+		function plusDivs(n) {
+		showDivs(slideIndex += n);
+		}
+		function showDivs(n) {
+		var i;
+		var x = document.getElementsByClassName("slides");
+		if (n > x.length) {slideIndex = 1}
+		if (n < 1) {slideIndex = x.length}
+		for (i = 0; i < x.length; i++) {
+		x[i].style.display = "none";
+		}
+		x[slideIndex-1].style.display = "block";
+		}
+
+
+
+
+		var more = document.querySelector(".more");
+		more.onclick = function(){
+			var btn = document.querySelector(".art-details");
+			btn.classList.toggle("extend");
+		};
+		</script>
+	</body>
+</html>
